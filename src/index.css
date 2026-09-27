@@ -1,0 +1,332 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  /* Base styles are now in app.css to avoid duplication */
+  /* Keep only essential body styles here */
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+}
+
+/* Remove duplicate animations and components to avoid conflicts */
+/* These are now consolidated in app.css */
+
+/* Only keep any page-specific styles below */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent layout shift when scrollbar appears */
+html {
+  overflow-y: scroll;
+}
+
+/* Better focus styles */
+*:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent layout shift */
+html {
+  overflow-y: scroll;
+}
+
+/* Better focus styles */
+*:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+/* Add to your existing index.css */
+
+/* Ensure full height layout */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Better responsive text */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Ensure footer stays at bottom */
+.flex-grow {
+  flex-grow: 1;
+}
+
+/* Smooth transitions */
+.transition {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Better focus states */
+button:focus-visible, a:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .container-custom {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+/* Add to your existing index.css */
+
+/* Ensure footer stays at bottom */
+.min-h-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make content grow to push footer down */
+.flex-grow {
+  flex-grow: 1;
+}
+
+/* Fix navbar z-index and visibility */
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Ensure buttons are visible */
+.bg-gray-100 {
+  background-color: #f3f4f6;
+}
+
+.bg-gray-100:hover {
+  background-color: #e5e7eb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .px-6 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .gap-8 {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  nav .gap-4 {
+    gap: 0.75rem;
+  }
+  
+  nav .text-sm {
+    font-size: 0.75rem;
+  }
+  
+  nav button, nav a {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+/* Add to your existing index.css */
+
+/* Ensure proper layout */
+.min-h-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+/* Responsive navbar */
+@media (max-width: 640px) {
+  nav .gap-2 {
+    gap: 0.5rem;
+  }
+  
+  nav button {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* Smooth transitions */
+.transition {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Better hover effects */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+/* Add to your existing index.css */
+
+/* Ensure proper layout */
+.min-h-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive navbar fixes */
+@media (max-width: 640px) {
+  .px-4 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  nav .gap-3 {
+    gap: 0.5rem;
+  }
+  
+  nav .text-xs {
+    font-size: 0.7rem;
+  }
+  
+  nav button, nav a {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* Smooth transitions */
+.transition {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Better hover effects */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+/* Prevent text overflow */
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+/* Add to your existing index.css */
+
+/* Smooth transitions */
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Prevent white screen */
+.min-h-screen {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* Ensure content is visible */
+.bg-gray-50 {
+  background-color: #f9fafb;
+}
